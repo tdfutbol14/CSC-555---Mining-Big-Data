@@ -1,0 +1,52 @@
+content for hadoop-2.6.4/etc/hadoop/core-site.xml
+
+<property>
+  <name>fs.defaultFS</name>
+  <value>hdfs://localhost/</value>
+</property>
+
+
+content for hadoop-2.6.4/etc/hadoop/hdfs-site.xml
+
+<property>
+ <name>dfs.replication</name>
+ <value>1</value>
+</property>
+
+
+content for hadoop-2.6.4/etc/hadoop/mapred-site.xml
+
+<property>
+<name>mapreduce.framework.name</name>
+<value>yarn</value>
+</property>
+
+
+content for hadoop-2.6.4/etc/hadoop/yarn-site.xml
+
+<property>
+  <name>yarn.resourcemanager.hostname</name>
+  <value>localhost</value>
+</property>
+
+<property>
+  <name>yarn.nodemanager.aux-services</name>
+  <value>mapreduce_shuffle</value>
+</property>
+
+
+
+
+
+
+
+export JAVA_HOME=/usr/lib/jvm/jre-1.7.0-openjdk.x86_64/
+
+export HADOOP_HOME=~/hadoop-2.6.4
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+export PIG_HOME=/home/ec2-user/pig-0.15.0
+export PATH=$PATH:$PIG_HOME/bin
+
+export HIVE_HOME=/home/ec2-user/apache-hive-2.0.1-bin 
+export PATH=$HIVE_HOME/bin:$PATH
